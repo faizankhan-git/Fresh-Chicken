@@ -1,7 +1,20 @@
 ion-menu-button {
   color: var(--ion-color-primary);
+  
 }
-
+ion-header{
+  border: 0px solid red;
+  height: 100px;
+  --ion-background-color:#ffff;
+}
+ion-item {
+  --padding-start: 0;
+  border: 0px solid red;
+  --ion-background-color:#ffff;
+}
+ion-buttons{
+  top : 2;
+}
 #container {
   text-align: center;
   position: absolute;
@@ -9,6 +22,9 @@ ion-menu-button {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+ion-content{
+  --ion-background-color:#ffff;
 }
 
 #container strong {
@@ -25,4 +41,26 @@ ion-menu-button {
 
 #container a {
   text-decoration: none;
+  
 }
+ion-icon {
+  color: #c4b7b1 !important;
+ 
+  --ionicon-stroke-width: 16px;
+
+}
+
+ion-button {
+	ion-badge {
+		position: absolute;
+		top: -0.009rem;
+		right: -0.2rem;
+		opacity: 0.9;
+
+		& ~ ion-icon {
+			margin-right: 1.2rem;
+		}
+	}
+}
+
+

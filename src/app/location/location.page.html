@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="setup">Back</ion-back-button>
+    </ion-buttons>
+    <ion-searchbar style="right: 16px !important;left: auto !important;"
+      type="string"
+      (ionInput)="onInput($event.target.value)"
+       debounce="500" 
+       placeholder="Choose delivery location"
+       expand="block" value="wakad" >
+      </ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item (touchend)="getLocation()">
+        <ion-icon name="locate-sharp"></ion-icon>
+        <p class="useLocation" >Use my current location</p>       
+    </ion-item>
+    <ion-item *ngFor="let area of searchedArea"   (touchend)="locate(area.id)" >
+      <ion-label><p>{{area.areadesc}}</p></ion-label>
+    </ion-item>
+
+</ion-list>
+
+</ion-content>
+

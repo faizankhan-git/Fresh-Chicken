@@ -1,0 +1,18 @@
+<ion-content  class="container">
+
+  <ion-slides #setupslides pager [options]="slideOpts" (ionSlideDidChange)="slideChanged()" >
+  <ion-slide *ngFor="let story of topStories">
+      <div >
+        <h2></h2>
+        <p class="setup-font">{{story.title}}</p> 
+        <ion-img src="{{story.picture}}"></ion-img>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+<ion-footer [hidden]="this.footerView" style="margin-right: -40px;" >
+  <ion-toolbar class="setup-footer" >
+    <ion-title expand="block" routerLink="/location" routerDirection="root">Let's Get Started</ion-title>
+  </ion-toolbar>
+</ion-footer>
